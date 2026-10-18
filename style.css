@@ -1,0 +1,203 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #241447, #082f49);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #312e81, #6d28d9, #0891b2);
+    color: white;
+    border-bottom: 2px solid #67e8f9;
+}
+
+header h1 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 18px #67e8f9;
+}
+
+header p {
+    margin: 8px 0;
+    color: #e0f2fe;
+}
+
+/* Navigation */
+nav {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #475569;
+}
+
+nav a {
+    color: #c4b5fd;
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #67e8f9;
+    text-shadow: 0 0 10px #67e8f9;
+}
+
+/* Main Sections */
+section {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    background: rgba(30, 41, 59, 0.78);
+    border: 1px solid rgba(103, 232, 249, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    border-color: #67e8f9;
+}
+
+section h2 {
+    color: #67e8f9;
+    font-size: 27px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #7c3aed;
+    padding-bottom: 8px;
+}
+
+section h3 {
+    color: #c4b5fd;
+    margin-bottom: 8px;
+}
+
+section p {
+    color: #e2e8f0;
+}
+
+/* Skills */
+.skills span {
+    display: inline-block;
+    background: linear-gradient(135deg, #4338ca, #7e22ce);
+    color: white;
+    padding: 9px 15px;
+    margin: 6px;
+    border-radius: 8px;
+    border: 1px solid #a78bfa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px rgba(103, 232, 249, 0.5);
+}
+
+/* Projects and Internship Cards */
+.project {
+    padding: 18px;
+    margin: 15px 0;
+    background: rgba(15, 23, 42, 0.7);
+    border-left: 4px solid #a78bfa;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    border-left-color: #67e8f9;
+    background: rgba(49, 46, 129, 0.5);
+    transform: translateX(5px);
+}
+
+/* Links and Buttons */
+.project a,
+#contact a {
+    color: #67e8f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover,
+#contact a:hover {
+    color: #c4b5fd;
+    text-decoration: underline;
+}
+
+/* Contact */
+#contact p {
+    margin: 12px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    margin-top: 35px;
+    background: #080f20;
+    color: #cbd5e1;
+    border-top: 1px solid #475569;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        position: static;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    section {
+        margin: 18px 12px;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
